@@ -16,13 +16,23 @@ using System.Windows.Shapes;
 namespace Marafon.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для RegisterAsRunnerPage.xaml
+    /// Логика взаимодействия для MainPage.xaml
     /// </summary>
-    public partial class RegisterAsRunnerPage : Page
+    public partial class MainPage : Page
     {
-        public RegisterAsRunnerPage()
+        public MainPage()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Pages.RegisterAsRunnerPage());
+        }
+
+        private void BtnLoginWindow_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Pages.LoginPage());
         }
     }
 }

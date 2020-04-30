@@ -24,5 +24,20 @@ namespace Marafon.Pages
         {
             InitializeComponent();
         }
+
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("Pages/MainPage.xaml", UriKind.Relative));
+        }
+
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
+
+        private void BtnCharityList_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -24,5 +24,16 @@ namespace Marafon.Pages
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Pages.RegisterAsRunnerPage());
+        }
+
+        private void BtnLoginWindow_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Pages.LoginPage());
+        }
     }
 }
+
