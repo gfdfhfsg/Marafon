@@ -1,0 +1,73 @@
+﻿<Page x:Class="Marafon.Pages.AdmininstratorMenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Marafon.Pages"
+      mc:Ignorable="d" 
+      Style="{DynamicResource base_page}"
+       Title="Marathon Skills 2020 - Menu admin">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" IsEnabled="False" Padding="100,10,5,10" Style="{DynamicResource text_block}" TextAlignment="Left">
+             <Run FontSize="26"  FontWeight="Bold"  >MARATHON SKILLS 2020</Run>
+        </TextBlock>
+        <Button x:Name="btnBack" Style="{DynamicResource base_button}" Width="80" Height="30" HorizontalAlignment="Left" Grid.Row="0" Margin="10,5,5,5" Content="Назад" Click="BtnBack_Click" />
+        <Button x:Name="btnLogout" Style="{DynamicResource base_button}" Width="100" Height="30" HorizontalAlignment="Right" Grid.Row="0" Margin="10,5,5,5" Content="Logout" Click="BtnBack_Click" />
+        <TextBlock Grid.Row="1" Style="{DynamicResource header_gray_text_block}">
+           Меню администратора
+        </TextBlock>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="0" Content="Пользователи" Style="{DynamicResource menu_button}">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btnCharityList" Grid.Row="1" Grid.Column="0" Style="{DynamicResource menu_button}" Click="BtnCharityList_Click" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+                <StackPanel>
+                    <TextBlock HorizontalAlignment="Center" Text="Благотворительные"/>
+                    <TextBlock HorizontalAlignment="Center" Text="организации"/>
+                </StackPanel>
+            </Button>
+
+
+            <Button Style="{DynamicResource menu_button}"  Grid.Row="0" Grid.Column="1" Content="Волонтеры" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <Button Style="{DynamicResource menu_button}" Grid.Row="1" Grid.Column="1" Content="Инвентарь" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+
+    </Grid>
+</Page>
